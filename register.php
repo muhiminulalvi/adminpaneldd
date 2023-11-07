@@ -1,5 +1,10 @@
 <?php
 session_start();
+if(isset($_SESSION['auth'])){
+    $_SESSION['message'] = "You are already Logged in.";
+    header('Location: index.php');
+    exit();
+}
 include('includes/header.php'); ?>
 <div class="container my-5">
     <form class=" shadow py-4 px-5 mx-5" method="post" action="functions\authcode.php">
