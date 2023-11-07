@@ -13,7 +13,7 @@
         die("Connection Error: ". mysqli_connect_error());
     }
     else {
-        echo"Connected Successfully";
+        echo"";
     }
 
 ?>
