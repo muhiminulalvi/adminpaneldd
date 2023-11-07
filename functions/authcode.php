@@ -52,11 +52,13 @@ if (isset($_POST['register_btn'])) {
     if (mysqli_num_rows($login_query_run) > 0) {
         $_SESSION['auth'] = true;
         $userdata = mysqli_fetch_array($login_query_run);
+        $user_id = $userdata['id'];
         $username = $userdata['username'];
         $useremail = $userdata['email'];
         $role = $userdata['role'];
 
         $_SESSION['auth_user'] = [
+            'user_id' => $user_id,
             'username' => $username,
             'email' => $useremail
         ];

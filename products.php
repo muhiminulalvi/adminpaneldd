@@ -34,7 +34,7 @@ if (isset($_GET['category'])) {
                                 foreach ($products as $item) {
                                     ?>
                                     <div class="col-md-4 gap-6">
-                                        <a href="#">
+                                        <a href="product-view.php?product=<?= $item['slug']; ?>">
                                             <div class="card shadow">
                                                 <div class="card-body">
                                                     <img src="uploads/<?= $item['image']; ?>" alt="Product Image"
@@ -59,9 +59,6 @@ if (isset($_GET['category'])) {
                 </div>
             </div>
         </div>
-
-
-
         <?php
     }
 
