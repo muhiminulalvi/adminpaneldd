@@ -1,13 +1,13 @@
+
 <?php include('includes/header.php') ?>
 <?php include('../middleware/adminmiddleware.php') ?>
-
 
 <div class="container-fluid py-4">
     <div class="row mx-5">
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="text-center text-danger">Add Category</h4>
+                    <h4 class="text-center text-primary">Add Category</h4>
                 </div>
                 <div class="card-body">
                     <form action="code.php" method="POST" enctype="multipart/form-data">
@@ -38,7 +38,7 @@
                                 <input  type="checkbox" name="popular">
                             </div>
                             <div class="col-md-12">
-                                <button type="submit" class="btn btn-danger w-100" name="add_category_btn">Add
+                                <button type="submit" class="btn btn-primary w-100" name="add_category_btn">Add
                                     Category</button>
                             </div>
                         </div>

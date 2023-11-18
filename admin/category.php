@@ -17,7 +17,8 @@
                                 <th>Name</th>
                                 <th>Image</th>
                                 <th>Status</th>
-                                <th>Action</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
                             </tr>
                         </thead>
                         <tbody class=" align-middle">
@@ -38,9 +39,12 @@
                                         <td>
                                             <?= $item['status'] == '0' ? "Visible" : "Hidden" ?>
                                         </td>
-                                        <td>
+                                        <td class="" >
                                             <a href="edit_category.php?id=<?= $item['id'] ?>" class="btn btn-primary">Edit</a>
-                                            <form action="code.php" method="POST">
+                                            
+                                        </td>
+                                        <td>
+                                        <form class=""  action="code.php" method="POST">
                                                 <input type="hidden" name="category_id" value="<?= $item['id'] ?>">
                                                 <button class="btn btn-primary" type="submit"
                                                     name="delete_category_btn">Delete</button>

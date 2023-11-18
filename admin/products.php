@@ -9,7 +9,7 @@
                 <div class="card-header">
                     <h3>Products</h3>
                 </div>
-                <div class="card-body">
+                <div class="card-body" id="product_table">
                     <table class="table table-bordered table-striped">
                         <thead>
                             <tr>
@@ -17,7 +17,8 @@
                                 <th>Name</th>
                                 <th>Image</th>
                                 <th>Status</th>
-                                <th>Action</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -32,7 +33,10 @@
                                         <td><img src=" ../uploads/<?= $item['image'] ?>" width="50px" height="50pxi " alt="<?= $item['name'] ?>" class=" w-25" ></td>
                                         <td><?= $item['status'] == '0' ? "Visible":"Hidden" ?></td>
                                         <td>
-                                            <a href="#" class="btn btn-primary" >Edit</a>
+                                            <a href="edit_product.php?id=<?= $item['id'] ?>" class="btn btn-primary" >Edit</a>
+                                        </td>
+                                        <td>
+                                        <button type="button" class="btn btn-primary delete_product_btn" value="<?= $item['id'] ?>">Delete</button>
                                         </td>
                                     </tr>
                                     <?php
