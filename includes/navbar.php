@@ -13,6 +13,9 @@
         <?php
         if (isset($_SESSION['auth'])) {
           ?>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="cart.php">Carts</a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <?= $_SESSION['auth_user']['username']; ?>
@@ -42,7 +45,7 @@
 
 
         <li class="nav-item">
-          <a class="nav-link " href="categories.php" >Categories</a>
+          <a class="nav-link " href="categories.php">Categories</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
