@@ -8,9 +8,9 @@ if (isset($_GET['product'])) {
     $product = mysqli_fetch_array($product_data);
     if ($product) {
         ?>
-        <div class="py-3 mb-10 bg-primary">
+        <div class="py-3 mb-10 ">
             <div class="container">
-                <h3 class="text-white">Home / Collections /
+                <h3 class="text-dark">Home / Collections /
                     <?= $product['name']; ?>
                 </h3>
             </div>

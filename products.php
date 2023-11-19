@@ -12,9 +12,9 @@ if (isset($_GET['category'])) {
         $cid = $category['id'];
         ?>
 
-        <div class="py-3 bg-primary">
+        <div class="py-3 ">
             <div class="container">
-                <h3 class="text-white">Home / Collections /
+                <h3 class="text-dark">Home / Collections /
                     <?= $category['name']; ?>
                 </h3>
             </div>
@@ -24,7 +24,7 @@ if (isset($_GET['category'])) {
                 <div class="row">
                     <div class="col-md-12">
 
-                        <h1 class="text-center text-primary font-weight-bold">
+                        <h1 class="text-center text-danger py-2 font-weight-bold">
                             <?= $category['name']; ?>
                         </h1>
                         <div class="row">

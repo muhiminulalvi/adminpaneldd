@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>
-        Material Dashboard 2 by Creative Tim
+        Admin Panel
     </title>
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css"

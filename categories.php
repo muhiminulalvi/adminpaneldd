@@ -3,9 +3,9 @@ include('functions/userfunctions.php');
 include('includes/header.php');
 
 ?>
-<div class="py-3 bg-primary">
+<div class="py-3 ">
     <div class="container">
-        <h3 class="text-white">Home / Collections</h3>
+        <h3 class="text-dark">Home / Collections</h3>
     </div>
 </div>
 <div class="py-5">
@@ -13,8 +13,8 @@ include('includes/header.php');
         <div class="row">
             <div class="col-md-12">
 
-                <h1 class="text-center text-primary font-weight-bold">Our Collections</h1>
-                <div class="row">
+                <h1 class="text-center text-danger font-weight-bold">Our Collections</h1>
+                <div class="row justify-content-center align-items-center g-5">
                     <?php
                     $categories = getAllActive('categories');
                     if (mysqli_num_rows($categories) > 0) {

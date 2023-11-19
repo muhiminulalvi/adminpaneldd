@@ -1,6 +1,6 @@
 $(document).ready(function () {
-  $(document).on("click", ".increment_btn", function () {
-    e.preventDefault();
+    $(document).on("click", ".increment_btn", function () {
+    // e.preventDefault();
     console.log("clicked");
 
     var inputQty = $(this).closest(".product_data").find(".input_qty");
@@ -16,8 +16,9 @@ $(document).ready(function () {
       inputQty.val(value); // Update the input with the incremented value
     }
   });
-  $(document).on("click", ".decrement_btn", function () {
-    e.preventDefault();
+  
+    $(document).on("click", ".decrement_btn", function () {
+    // e.preventDefault();
     // console.log("clicked");
 
     var inputQty = $(this).closest(".product_data").find(".input_qty");
@@ -35,7 +36,6 @@ $(document).ready(function () {
   });
 
   $(".addToCartButton").click(function (e) {
-    
     e.preventDefault();
     var inputQty = $(this).closest(".product_data").find(".input_qty");
     var qty = inputQty.val();
@@ -75,12 +75,15 @@ $(document).ready(function () {
         prod_qty: qty,
         scope: "update",
       },
-      success: function (response) {},
+      success: function (response) {
+      
+      },
     });
   });
   $(document).on("click", ".deleteItem", function () {
-    var cart_id = $(this).val();
 
+    var cart_id = $(this).val();
+  
     $.ajax({
       method: "POST",
       url: "functions/handlecart.php",
@@ -90,11 +93,12 @@ $(document).ready(function () {
       },
       success: function (response) {
         if (response == 200) {
-          alertify.success("Item Deleted");
-          $("#myCart").load(location.href + " #myCart");
-        } else {
-          alertify.success(response);
-        }
+            alertify.success("Item Deleted");
+            $('#myCart').load(location.href + " #myCart")
+          }
+          else {
+            alertify.success(response);
+          }
       },
     });
   });

@@ -32,6 +32,12 @@ function getIDActive($table,$id){
     $query = "SELECT * FROM $table WHERE id = '$id' AND status = '0' ";
     return $query_run = mysqli_query($con, $query);
 }
+function getOrders(){
+    global $con;
+    $userId = $_SESSION['auth_user']['user_id'];
+    $query = "SELECT * FROM orders WHERE user_id='$userId'";
+    return $query_run = mysqli_query($con, $query);
+}
 
 function redirect($url, $message){
     $_SESSION['message'] = $message;

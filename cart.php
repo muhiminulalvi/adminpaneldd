@@ -3,9 +3,9 @@
 include('functions/userfunctions.php');
 include('includes/header.php'); ?>
 
-<div class="py-3 bg-primary">
+<div class="py-3 ">
     <div class="container">
-        <h3 class="text-white">Home / Carts</h3>
+        <h3 class="text-dark">Home / Carts</h3>
     </div>
 </div>
 <div class="py-5">
@@ -40,6 +40,7 @@ include('includes/header.php'); ?>
 
 
                         <?php $items = getCartItems();
+                        if(mysqli_num_rows($items) > 0) {
 
                         foreach ($items as $citem) {
                             ?>
@@ -80,6 +81,10 @@ include('includes/header.php'); ?>
                             <?php
 
 
+                        }} else {
+                            ?>
+                            <h3>Cart is Empty</h3>
+                            <?php
                         }
                         ?>
                     </div>

@@ -19,5 +19,11 @@ function redirect($url, $message){
         header('Location: '. $url);
         exit();
 }
+function getAllOrders(){
+    global $con;
+    $query = "SELECT * FROM orders ";
+    return $query_run = mysqli_query($con, $query);
+}
+
 
 ?>

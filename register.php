@@ -75,8 +75,9 @@ include('includes/header.php'); ?>
             </div>
         </div>
         <div class="col-12 text-center">
-            <button class="btn btn-danger my-3" name="register_btn" type="submit">Submit form</button>
+            <button class="btn btn-danger my-3" name="register_btn" type="submit">Register</button>
         </div>
+        <h6 class="text-center">Already have an account? Please <a href="login.php">Login</a>.</h6>
     </form>
 </div>
 <?php include('includes/footer.php'); ?>
