@@ -45,4 +45,11 @@ function redirect($url, $message){
         exit();
 }
 
+function checkTrackingNo($trackingNo){
+    global $con;    
+    $userId = $_SESSION['auth_user']['user_id'];
+    $query = "SELECT * FROM orders WHERE tracking_no='$trackingNo' AND user_id='$userId'";
+    return mysqli_query($con, $query);
+}
+
 ?>

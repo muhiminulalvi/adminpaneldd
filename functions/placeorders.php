@@ -22,7 +22,7 @@ if (isset($_SESSION['auth'])) {
             $totalPrice += $citem['selling_price'] * $citem['prod_qty'];
         }
         $user_id = $_SESSION["auth_user"]["user_id"];
-        $insert_query = "INSERT INTO orders (tracking_no, user_id, email, phone, address, pin_code, total_price, payment_mode, payment_id) VALUES ('$tracking_no','$user_id','$email','$phone','$address','$pincode','$totalPrice','$payment_mode','$payment_id')";
+        $insert_query = "INSERT INTO orders (name,tracking_no, user_id, email, phone, address, pin_code, total_price, payment_mode, payment_id) VALUES ('$name','$tracking_no','$user_id','$email','$phone','$address','$pincode','$totalPrice','$payment_mode','$payment_id')";
 
         $insert_query_run = mysqli_query($con, $insert_query);
 

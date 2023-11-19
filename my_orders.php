@@ -22,8 +22,7 @@ include('includes/header.php'); ?>
                                 <th>Tracking No</th>
                                 <th>Price</th>
                                 <th>Date</th>
-                                
-
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -45,6 +44,9 @@ include('includes/header.php'); ?>
                                         </td>
                                         <td>
                                             <?= $item['created_at'] ?>
+                                        </td>
+                                        <td>
+                                            <a href="view_order.php?trackingNo=<?= $item['tracking_no'] ?>" class="btn btn-danger">View Details</a href="">
                                         </td>
                                         
                                     </tr>

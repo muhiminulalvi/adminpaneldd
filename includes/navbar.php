@@ -18,7 +18,7 @@
         if (isset($_SESSION['auth'])) {
           ?>
           <li class="nav-item">
-            <a class="nav-link active fs-5" aria-current="page" href="cart.php">Carts</a>
+            <a class="nav-link fs-5" aria-current="page" href="cart.php">Carts</a>
           </li>
           <li class="nav-item">
           <a class="nav-link  fs-5" href="my_orders.php">Orders</a>
