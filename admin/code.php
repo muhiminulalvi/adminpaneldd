@@ -148,6 +148,14 @@ else if (isset($_POST["delete_product_btn"])){
         // redirect("products.php", "Something went wrong");
         echo 500;
     }
+} else if(isset($_POST["update_status_btn"])){
+    $track_no = $_POST['tracking_no'];
+    $order_status = $_POST['order_status'];
+
+    $updateOrderQuery = "UPDATE orders SET status='$order_status' WHERE tracking_no='$track_no'";
+    $updateOrderQuery_run = mysqli_query($con, $updateOrderQuery);
+
+    redirect("view_order.php?t=$track_no", "Order Status Updated Successfully");
 }
 else {
     header("Location: ../index.php");

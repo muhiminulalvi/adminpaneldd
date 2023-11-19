@@ -25,5 +25,12 @@ function getAllOrders(){
     return $query_run = mysqli_query($con, $query);
 }
 
+function checkTrackingNo($trackingNo){
+    global $con;    
+
+    $query = "SELECT * FROM orders WHERE tracking_no='$trackingNo' ";
+    return mysqli_query($con, $query);
+}
+
 
 ?>

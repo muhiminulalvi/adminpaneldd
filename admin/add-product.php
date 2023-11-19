@@ -77,7 +77,7 @@
                                 <input type="checkbox" name="trending">
                             </div>
                             <div class="col-md-12">
-                                <button type="submit" class="btn btn-primary w-100" name="add_product_btn">Add
+                                <button type="submit" class="btn btn-danger w-100" name="add_product_btn">Add
                                     Product</button>
                             </div>
                         </div>

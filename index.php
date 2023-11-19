@@ -25,19 +25,36 @@ include('includes/header.php'); ?>
         </div>
     </div>
 </div>
-<section class="container py-10">
-    <div class="row justify-content-center align-items-center">
-        <div class="col-md-6">
-            <h2 class=" display-3">Welcome To ÉLECTRICITÉ</h2>
-            <h5 class="">Visit the best shop in the city. Buy your required products at a reasonable price.</h5>
-            <button class="btn btn-danger">Get Started</button>
-        </div>
-        <div class="col-md-6">
-            <img src="assets\img\hero_sec.jpg" class="img-fluid" alt="">
-        </div>
+<div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="assets\img\slide1.png" class="d-block "  alt="...">
+
     </div>
-</section>
-<section class="about-section bg-body-tertiary py-5">
+    <div class="carousel-item">
+      <img src="assets\img\slide2.png" class="d-block " alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="assets\img\slide3.png" class="d-block w-100" alt="...">
+      
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<section class="about-section  py-5">
     <div class="container py-5">
         <div class="row justify-content-between align-items-center g-3">
             <div class="col-md-6">
@@ -60,7 +77,8 @@ include('includes/header.php'); ?>
         </div>
     </div>
 </section>
-<div class=" py-5 ">
+
+<div class=" py-5 bg-body-tertiary">
     <div class="container py-5">
         <div class="row">
             <div class="col-md-12">
@@ -98,7 +116,51 @@ include('includes/header.php'); ?>
         </div>
     </div>
 </div>
+<section class="container py-10">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-6">
+            <h2 class=" display-3">Buy Our Trending Products</h2>
+            <h5 class="">Visit the best shop in the city. Buy your required products at a reasonable price.</h5>
+            <button class="btn btn-danger">See More</button>
+        </div>
+        <div class="col-md-6">
+            <img src="assets\img\hero_sec.jpg" class="img-fluid" alt="">
+        </div>
+    </div>
+</section>
 <div class="bg-body-tertiary py-5">
+    <div class="container  py-5">
+        <div class="row">
+            <h2 class="text-danger text-center">Our Trending Products</h2>
+                <?php 
+                    $trendingProd = getAllTrending();
+                    if (mysqli_num_rows($trendingProd) > 0) {
+                        foreach ($trendingProd as $item) {
+                            ?>
+                                <div class="col-md-4 g-3" >
+                                        <a href="product-view.php?product=<?= $item['slug']; ?>">
+                                            <div class="card shadow-lg border-5 border-danger h-100" >
+                                                <div class="card-body">
+                                                    <img src="uploads/<?= $item['image']; ?>" alt="Product Image"
+                                                        class="w-100 rounded-3 mb-1" height="320px">
+                                                    <h4 class="text-center">
+                                                        <?= $item['name']; ?>
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                            <?php
+                        }
+                    }
+                ?>
+            
+            
+        </div>
+    </div>
+</div>
+<div class=" py-5">
     <div class="container  py-5">
         <div class="row">
             <div class="col-md-6">
@@ -118,14 +180,20 @@ include('includes/header.php'); ?>
             <div class="col-md-6 ">
 
                 <form>
-                    <div class="mb-3">   
-                        <input type="email" class="form-control py-4 px-5 rounded-1 shadow-lg border-0" placeholder="Enter your email"  id="exampleInputEmail1" aria-describedby="emailHelp">  
+                    <div class="mb-3">
+                        <input type="text" class="form-control py-4 px-5 rounded-1 shadow-lg border-0"
+                            placeholder="Enter your name" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-3">
-                        
-                        <textarea type="text" class="form-control py-4 px-5 rounded-1 shadow-lg border-0" id="exampleInputPassword1" placeholder="Write your message"></textarea>
+                        <input type="email" class="form-control py-4 px-5 rounded-1 shadow-lg border-0"
+                            placeholder="Enter your email" id="exampleInputEmail2" aria-describedby="emailHelp">
                     </div>
-                    
+                    <div class="mb-3">
+
+                        <textarea type="text" class="form-control py-4 px-5 rounded-1 shadow-lg border-0"
+                            id="exampleInputPassword1" placeholder="Write your message"></textarea>
+                    </div>
+
                     <button type="submit" class="btn btn-danger w-100">Submit</button>
                 </form>
             </div>

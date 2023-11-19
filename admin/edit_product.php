@@ -89,7 +89,7 @@
                                         <input type="checkbox" name="trending" <?= $data['trending'] == '0' ? "": "checked" ?>>
                                     </div>
                                     <div class="col-md-12">
-                                        <button type="submit" class="btn btn-primary w-100" name="update_product_btn">Update
+                                        <button type="submit" class="btn btn-danger w-100" name="update_product_btn">Update
                                             Product</button>
                                     </div>
                                 </div>

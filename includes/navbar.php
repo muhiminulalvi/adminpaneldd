@@ -10,6 +10,7 @@
         <li class="nav-item">
           <a class="nav-link active fs-5" aria-current="page" href="index.php">Home</a>
         </li>
+       
         <li class="nav-item">
           <a class="nav-link  fs-5" href="categories.php">Categories</a>
         </li>

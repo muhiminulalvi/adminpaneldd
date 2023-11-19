@@ -14,7 +14,7 @@
     <div class="collapse navbar-collapse  w-auto  max-height-vh-100" id="sidenav-collapse-main">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link text-white <?= $page == "index.php"? 'active bg-gradient-primary': '' ?>" href="index.php">
+          <a class="nav-link text-white <?= $page == "index.php"? 'active bg-gradient-danger': '' ?>" href="index.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">dashboard</i>
             </div>
@@ -22,7 +22,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white <?= $page == "category.php"? 'active bg-gradient-primary': '' ?>" href="category.php">
+          <a class="nav-link text-white <?= $page == "category.php"? 'active bg-gradient-danger': '' ?>" href="category.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">table_view</i>
             </div>
@@ -30,7 +30,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white <?= $page == "add-category.php"? 'active bg-gradient-primary': '' ?>" href="add-category.php">
+          <a class="nav-link text-white <?= $page == "add-category.php"? 'active bg-gradient-danger': '' ?>" href="add-category.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">table_view</i>
             </div>
@@ -38,7 +38,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white <?= $page == "products.php"? 'active bg-gradient-primary': '' ?>" href="products.php">
+          <a class="nav-link text-white <?= $page == "products.php"? 'active bg-gradient-danger': '' ?>" href="products.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">table_view</i>
             </div>
@@ -46,7 +46,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white <?= $page == "add-product.php"? 'active bg-gradient-primary': '' ?>" href="add-product.php">
+          <a class="nav-link text-white <?= $page == "add-product.php"? 'active bg-gradient-danger': '' ?>" href="add-product.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">table_view</i>
             </div>
@@ -54,7 +54,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white <?= $page == "orders.php"? 'active bg-gradient-primary': '' ?>" href="orders.php">
+          <a class="nav-link text-white <?= $page == "orders.php"? 'active bg-gradient-danger': '' ?>" href="orders.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">table_view</i>
             </div>
@@ -65,7 +65,7 @@
     </div>
     <div class="sidenav-footer position-absolute w-100 bottom-0 ">
       <div class="mx-3">
-        <a class="btn bg-gradient-primary mt-4 w-100" href="../logout.php" >Logout</a>
+        <a class="btn bg-gradient-danger mt-4 w-100" href="../logout.php" >Logout</a>
       </div>
     </div>
   </aside>

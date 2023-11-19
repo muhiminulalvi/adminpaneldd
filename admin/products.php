@@ -33,10 +33,10 @@
                                         <td><img src=" ../uploads/<?= $item['image'] ?>" width="50px" height="50pxi " alt="<?= $item['name'] ?>" class=" w-25" ></td>
                                         <td><?= $item['status'] == '0' ? "Visible":"Hidden" ?></td>
                                         <td>
-                                            <a href="edit_product.php?id=<?= $item['id'] ?>" class="btn btn-primary" >Edit</a>
+                                            <a href="edit_product.php?id=<?= $item['id'] ?>" class="btn btn-danger" >Edit</a>
                                         </td>
                                         <td>
-                                        <button type="button" class="btn btn-primary delete_product_btn" value="<?= $item['id'] ?>">Delete</button>
+                                        <button type="button" class="btn btn-danger delete_product_btn" value="<?= $item['id'] ?>">Delete</button>
                                         </td>
                                     </tr>
                                     <?php

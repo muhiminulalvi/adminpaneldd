@@ -14,7 +14,7 @@
                     ?>
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="text-center text-primary">Edit Category</h4>
+                            <h4 class="text-center text-danger">Edit Category</h4>
                         </div>
                         <div class="card-body">
                             <form action="code.php" method="POST" enctype="multipart/form-data">
@@ -53,7 +53,7 @@
                                         <input type="checkbox" <?= $data['popular'] ? "checked": "" ?> name="popular">
                                     </div>
                                     <div class="col-md-12">
-                                        <button type="submit" class="btn btn-primary w-100" name="update_category_btn">Update
+                                        <button type="submit" class="btn btn-danger w-100" name="update_category_btn">Update
                                             Category</button>
                                     </div>
                                 </div>

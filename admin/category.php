@@ -40,13 +40,13 @@
                                             <?= $item['status'] == '0' ? "Visible" : "Hidden" ?>
                                         </td>
                                         <td class="" >
-                                            <a href="edit_category.php?id=<?= $item['id'] ?>" class="btn btn-primary">Edit</a>
+                                            <a href="edit_category.php?id=<?= $item['id'] ?>" class="btn btn-danger">Edit</a>
                                             
                                         </td>
                                         <td>
                                         <form class=""  action="code.php" method="POST">
                                                 <input type="hidden" name="category_id" value="<?= $item['id'] ?>">
-                                                <button class="btn btn-primary" type="submit"
+                                                <button class="btn btn-danger" type="submit"
                                                     name="delete_category_btn">Delete</button>
                                             </form>
                                         </td>

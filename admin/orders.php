@@ -13,13 +13,15 @@
                     <table class="table table-bordered table-striped">
                         <thead>
                             <tr>
-                                <th>#</th>
-                                <th>User Email</th>
-                                <th>Tracking No</th>
-                                <th>Price</th>
-                                <th>Status</th>
-                                <th>Payment Method</th>
-                                <th>Date</th>
+                                <th class="align-middle text-center">#</th>
+                                <th class="align-middle text-center">User Name</th>
+                                <th class="align-middle text-center">User Email</th>
+                                <th class="align-middle text-center">Tracking No</th>
+                                <th class="align-middle text-center">Price</th>
+                            
+                                
+                                <th class="align-middle text-center">Date</th>
+                                <th class="align-middle text-center">View</th>
                           
 
                             </tr>
@@ -32,26 +34,28 @@
                                 foreach ($orders as $item) {
                                     ?>
                                     <tr>
-                                        <td>
+                                        <td class="align-middle text-center">
                                             <?= $item['id'] ?>
                                         </td>
-                                        <td>
+                                        <td class="align-middle text-center">
+                                            <?= $item['name'] ?>
+                                        </td>
+                                        <td class="align-middle text-center">
                                             <?= $item['email'] ?>
                                         </td>
-                                        <td>
+                                        <td class="align-middle text-center">
                                             <?= $item['tracking_no'] ?>
                                         </td>
-                                        <td>
+                                        <td class="align-middle text-center">
                                             <?= $item['total_price'] ?>
                                         </td>
-                                        <td>
-                                             <?= $item['status'] == 0 ? 'Under Process':'Completed' ?>
-                                        </td>
-                                        <td>
-                                            <?= $item['payment_mode'] ?>
-                                        </td>
-                                        <td>
+                                        
+                                        
+                                        <td class="align-middle text-center">
                                             <?= $item['created_at'] ?>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <a href="view_order.php?t=<?= $item['tracking_no'] ?>" class="btn btn-danger" >View Details</a>
                                         </td>
                                         
                                         
